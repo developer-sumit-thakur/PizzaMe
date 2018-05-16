@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_border_selector"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:id="@+id/store_name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/store_name"
+                style="@style/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="name"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="distance"
+                android:textColor="@android:color/holo_green_dark"
+                android:textStyle="italic" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/store_address"
+            style="@style/summaryText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/store_name_layout"
+            android:text="address" />
+
+        <RelativeLayout
+            android:id="@+id/store_phone_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/store_address"
+            android:background="@drawable/button_selector">
+
+            <ImageView
+                android:id="@+id/call_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/call_button" />
+
+            <TextView
+                android:id="@+id/store_phone"
+                style="@style/summaryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/call_button"
+                android:text="phone" />
+
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:id="@+id/direction_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/store_address"
+            android:layout_below="@id/store_name_layout">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector"
+                android:src="@mipmap/direction_button" />
+
+        </FrameLayout>
+    </RelativeLayout>
+</LinearLayout>
