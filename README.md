@@ -1,2 +1,2 @@
 # PizzaMe
-Project using MVVM, RxJava, Retrofit &amp; Espresso Test
+Project using MVP, RxJava, Retrofit &amp; Espresso Test
